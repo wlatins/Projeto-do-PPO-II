@@ -122,4 +122,22 @@ class Empresa
 
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+public function excluir($id) {
+    $sql = "DELETE FROM empresa WHERE id_empresa = :id_empresa";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bindParam(':id_empresa', $id);
+    return $stmt->execute();
+}
+
+public function editar($id, $nome, $email, $cnpj, $telefone) {
+    $sql = "UPDATE empresa SET nome_empresa = :nome, email_empresa = :email, cnpj_empresa = :cnpj, telefone_empresa = :telefone WHERE id_empresa = :id";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':cnpj', $cnpj);
+    $stmt->bindParam(':telefone', $telefone);
+    $stmt->bindParam(':id', $id);
+    return $stmt->execute();
+}
 }
