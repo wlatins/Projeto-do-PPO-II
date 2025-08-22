@@ -1,0 +1,127 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: large;
+    padding: 2rem 0;
+    justify-items: center;
+}
+
+.walter,
+.joao,
+.rian {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 350px;
+    max-width: 95vw;
+    min-height: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.foto1,
+.foto2,
+.foto3 {
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 300px;
+    max-width: 90vw;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+    transition: width 0.2s, height 0.2s;
+}
+
+.foto1 {
+    background-image: url("../imagens/w.jpeg");
+}
+
+.foto2 {
+    background-image: url("../imagens/j.jpg");
+}
+
+.foto3 {
+    background-image: url("../imagens/rianzin222.jpg");
+}
+
+.txt1,
+.txt2,
+.txt3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+@media (max-width: 1100px) {
+    .nos {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 2rem 0;
+    }
+
+    .walter,
+    .joao,
+    .rian {
+        margin-top: 40px;
+        margin-bottom: 0;
+        width: 95vw;
+        max-width: 400px;
+    }
+
+    .foto1,
+    .foto2,
+    .foto3 {
+        width: 90vw;
+        max-width: 320px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .walter,
+    .joao,
+    .rian {
+        width: 98vw;
+        max-width: 98vw;
+        min-height: unset;
+        padding-top: 16px;
+    }
+
+    .foto1,
+    .foto2,
+    .foto3 {
+        width: 96vw;
+        max-width: 96vw;
+        height: 120px;
+        border-radius: 12px;
+    }
+
+    .txt1,
+    .txt2,
+    .txt3 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        margin-top: 12px;
+    }
+}

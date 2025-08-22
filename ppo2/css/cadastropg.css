@@ -1,0 +1,178 @@
+html,
+body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #222;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #0F6292;
+    border-radius: 8px;
+}
+
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    background: #000;
+}
+
+.page1 {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+}
+
+.dada {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-family: "DM Serif Display", serif;
+    z-index: 2;
+    color: #FFF;
+    text-shadow: 0 2px 8px #0008;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto 0 auto;
+    gap: 1rem;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px 8px 0 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    color: #FFF;
+    transition: background 0.2s, color 0.2s;
+}
+
+.tabs button.active {
+    background-color: #0F6292;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login .usuario,
+.login .email,
+.login .cpf,
+.login .telefone,
+.login .senha {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.login input {
+    background-color: white;
+    width: 100%;
+    color: black;
+    border: none;
+    height: 45px;
+    outline: none;
+    border-radius: 8px;
+    padding-left: 16px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+}
+
+.botao {
+    background-color: #0F6292;
+    color: #FFF;
+    border-radius: 8px;
+    width: 100%;
+    padding: 12px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.botao:hover {
+    background: #222;
+    color: #0F6292;
+}
+
+@media (max-width: 600px) {
+    .dada {
+        font-size: 2.2rem;
+    }
+
+    .tabs {
+        max-width: 95vw;
+        gap: 0.5rem;
+    }
+
+    .login {
+        padding: 1.2rem 0.5rem;
+        max-width: 95vw;
+    }
+}
+
+.m1 {
+    margin-top: 30px;
+    color: #4FD1C5;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: color 0.2s, text-shadow 0.2s;
+    cursor: pointer;
+    margin: 15px auto 0;
+    display: block;
+}
+
+.m1:hover, .m1:focus {
+    color: #222;
+    text-shadow: 0 2px 8px #4FD1C5;
+    text-decoration: none;
+}
